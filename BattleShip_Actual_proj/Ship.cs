@@ -34,6 +34,9 @@ namespace BattleShip_Actual_proj
 
 
         // member methods
-
+        public void LoseHealth()
+        {
+            health--;
+        }
     }
 }
