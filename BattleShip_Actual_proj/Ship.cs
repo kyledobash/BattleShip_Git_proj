@@ -11,7 +11,7 @@ namespace BattleShip_Actual_proj
         // member variables
         protected string name;
         protected int spaceSize;
-        public int health;
+        protected int health;
 
 
         public double SpaceSize

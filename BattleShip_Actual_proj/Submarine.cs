@@ -11,7 +11,12 @@ namespace BattleShip_Actual_proj
         // member variables
 
         // constructor
-
+        Submarine()
+        {
+            name = "Submarine";
+            health = 3;
+            spaceSize = 3;
+        }
         // member methods
 
     }

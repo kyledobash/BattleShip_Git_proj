@@ -12,6 +12,7 @@ namespace BattleShip_Actual_proj
         private string name;
         protected int score;
         protected int shipsRemaining;
+        protected bool isTurn;
         GameBoard gameboard;
 
         // constructor
@@ -31,6 +32,10 @@ namespace BattleShip_Actual_proj
         public void DecrementShipCount()
         {
             shipsRemaining--;
+        }
+        public void ChangePlayerTurn()
+        {
+            isTurn = !isTurn;
         }
     }
 }
