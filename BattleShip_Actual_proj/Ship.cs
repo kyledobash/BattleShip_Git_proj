@@ -6,7 +6,34 @@ using System.Threading.Tasks;
 
 namespace BattleShip_Actual_proj
 {
-    class Ship
+    abstract class Ship
     {
+        // member variables
+        protected string name;
+        protected int spaceSize;
+        public int health;
+
+
+        public double SpaceSize
+        {
+            get
+            {
+                return spaceSize;
+            }
+        }
+
+        public string Name
+        {
+            get
+            {
+                return name;
+            }
+        }
+
+        // constructor
+
+
+        // member methods
+
     }
 }

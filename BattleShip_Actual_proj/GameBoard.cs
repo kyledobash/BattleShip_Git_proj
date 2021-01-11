@@ -8,5 +8,11 @@ namespace BattleShip_Actual_proj
 {
     class GameBoard
     {
+        // member variables
+
+        // constructor
+
+        // member methods
+
     }
 }

@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace BattleShip_Actual_proj
 {
-    class AircraftCarrier
+    class AircraftCarrier : Ship
     {
+        // member variables
+
+        // constructor
+
+        // member methods
+
     }
 }
