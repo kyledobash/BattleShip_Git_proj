@@ -12,7 +12,7 @@ namespace BattleShip_Actual_proj
         protected string name;
         protected int spaceSize;
         protected int health;
-
+        protected bool sunk;
 
         public double SpaceSize
         {
@@ -30,8 +30,23 @@ namespace BattleShip_Actual_proj
             }
         }
 
-        // constructor
+        public bool Sunk
+        {
+            get
+            {
+                return sunk;
+            }
+            set
+            {
+                sunk = value;
+            }
+        }
 
+        // constructor
+        Ship ()
+        {
+            sunk = false;
+        }
 
         // member methods
         public void LoseHealth()
