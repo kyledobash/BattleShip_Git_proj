@@ -27,9 +27,33 @@ namespace BattleShip_Actual_proj
             ships = new List<Ship>();
         }
         // member methods
-        public void CheckForShip(int coordinate)
+        public void PlaceShip(int x, int y, Ship boat)
+        {            
+            if (CheckSpaceIsEmpty(x,y,boat))
+            {
+                for (int j = 0; j < boat.SpaceSize; j++)
+                {
+                    board[x, y + j] = boat.Name;
+                }
+            }
+            else
+            {
+                throw new Exception("There is already a boat at these coordinates");
+            }
+        }
+
+        public bool CheckSpaceIsEmpty(int x, int y, Ship boat)
         {
-            //coordinate = !coordinate;
+            bool spaceIsEmpty = true;
+
+            for (int i = 0; i < boat.SpaceSize; i++)
+            {
+                if (board[x, y + i] != null)
+                {
+                    spaceIsEmpty = false;
+                }
+            }
+            return spaceIsEmpty;
         }
     }
 }

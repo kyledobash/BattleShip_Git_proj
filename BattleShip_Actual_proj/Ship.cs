@@ -53,13 +53,5 @@ namespace BattleShip_Actual_proj
         {
             health--;
         }
-
-        public void PlaceShip(int x, int y, Ship boat)
-        {
-            for (int i = 0; i < Board.length; i++)
-            {
-
-            }
-        }
     }
 }
