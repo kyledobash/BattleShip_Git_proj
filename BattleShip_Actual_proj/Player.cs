@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace BattleShip_Actual_proj
 {
-    class Player
+    public class Player
     {
         // member variables
         private string name;
         protected int score;
         protected int shipsRemaining;
         protected bool isTurn;
-        GameBoard gameboard;
+        protected GameBoard gameboard;
 
         // constructor
         Player (string inputName)

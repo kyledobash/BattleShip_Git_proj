@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BattleShip_Actual_proj
 {
-    class BattleShip : Ship
+    public class BattleShip : Ship
     {
         // member variables
 

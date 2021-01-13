@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BattleShip_Actual_proj
 {
-    abstract class Ship
+    public abstract class Ship
     {
         // member variables
         protected string name;
@@ -43,7 +43,7 @@ namespace BattleShip_Actual_proj
         }
 
         // constructor
-        Ship ()
+        public Ship ()
         {
             sunk = false;
         }
@@ -52,6 +52,14 @@ namespace BattleShip_Actual_proj
         public void LoseHealth()
         {
             health--;
+        }
+
+        public void PlaceShip(int x, int y, Ship boat)
+        {
+            for (int i = 0; i < Board.length; i++)
+            {
+
+            }
         }
     }
 }

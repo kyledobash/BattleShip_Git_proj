@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace BattleShip_Actual_proj
 {
-    class GameBoard
+    public class GameBoard
     {
         // member variables
-        protected int[,] board;
+        protected string[,] board;
+        protected List<Ship> ships;
 
-        public int[,] Board
+        public string[,] Board
         {
             get
             {
@@ -20,24 +21,12 @@ namespace BattleShip_Actual_proj
         }
 
         // constructor
-        GameBoard()
+        public GameBoard()
         {
-            board = new int[20,20];
+            board = new string[20,20];
+            ships = new List<Ship>();
         }
         // member methods
-        public void PopulateGameBoard()
-        {
-            ////create a current coordinate
-            //string currentCoordinate;
-
-            //for (int i = 0; i < board.Length; i++)
-            //{
-            //    for (int j = 0; j < board[i].Length; j++)
-            //    {
-            //        array
-            //    }
-            //}
-        }
         public void CheckForShip(int coordinate)
         {
             //coordinate = !coordinate;
