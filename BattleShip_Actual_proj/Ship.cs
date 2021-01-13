@@ -53,5 +53,20 @@ namespace BattleShip_Actual_proj
         {
             health--;
         }
+        public bool CheckIfSunk()
+        {
+            if (this.health == 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public void Sink ()
+        {
+            sunk = true;
+        }
     }
 }

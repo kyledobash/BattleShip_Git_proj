@@ -9,14 +9,29 @@ namespace BattleShip_Actual_proj
     public class GameBoard
     {
         // member variables
-        protected string[,] board;
+        protected string[,] gameplayBoard;
+        protected string[,] displayBoard;
         protected List<Ship> ships;
 
-        public string[,] Board
+        public string[,] GameplayBoard
         {
             get
             {
-                return board;
+                return GameplayBoard;
+            }
+        }
+        public string[,] DisplayBoard
+        {
+            get
+            {
+                return DisplayBoard;
+            }
+        }
+        public List<Ship> Ships
+        {
+            get
+            {
+                return ships;
             }
         }
 

@@ -37,5 +37,24 @@ namespace BattleShip_Actual_proj
         {
             isTurn = !isTurn;
         }
+        public void AttemptAttack(int x, int y, Player currentPlayer, Player enemy)
+        {
+            if (enemy.gameboard.GameplayBoard[x,y] == null)
+            {
+                currentPlayer.gameboard.DisplayBoard[x, y] = "miss";
+            }
+            else if (enemy.gameboard.GameplayBoard[x, y] != null && currentPlayer.gameboard.DisplayBoard[x, y] != "miss")
+            {
+                foreach (Ship enemyship in enemy.gameboard.Ships)
+                {
+                    if (enemy.gameboard.GameplayBoard[x, y] == enemyship.Name)
+                    {
+                        enemyship.LoseHealth();
+                        currentPlayer.gameboard.DisplayBoard[x, y] = "hit";
+                        //check if ship is sunk
+                    }
+                }
+            }
+        }
     }
 }
