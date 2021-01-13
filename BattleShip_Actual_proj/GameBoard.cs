@@ -48,7 +48,7 @@ namespace BattleShip_Actual_proj
             {
                 for (int j = 0; j < boat.SpaceSize; j++)
                 {
-                    board[x, y + j] = boat.Name;
+                    gameplayBoard[x, y + j] = boat.Name;
                 }
             }
             else

@@ -64,9 +64,5 @@ namespace BattleShip_Actual_proj
                 return false;
             }
         }
-        public void Sink ()
-        {
-            sunk = true;
-        }
     }
 }

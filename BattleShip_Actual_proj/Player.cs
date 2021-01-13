@@ -51,7 +51,36 @@ namespace BattleShip_Actual_proj
                     {
                         enemyship.LoseHealth();
                         currentPlayer.gameboard.DisplayBoard[x, y] = "hit";
-                        //check if ship is sunk
+                        if (enemyship.CheckIfSunk())
+                        {
+                            enemyship.Sunk = true;
+                            currentPlayer.IncrementScore();
+                            for (int i = 0; i < currentPlayer.gameboard.DisplayBoard.Length; i++)
+                            {
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        public void RemoveShip(Ship deadShip, Player currentPlayer, Player enemy)
+        {
+            deadShip.Sunk = true;
+
+            //iterate over enemy gameplay array
+            //iterate over inner arrays
+            //if current index == deadShip.name
+            //current index == null
+
+            for (int i = 0; i < enemy.gameboard.GameplayBoard.Length - 1; i++)
+            {
+                for (int j = 0; j < enemy.gameboard.GameplayBoard[i].Length; j++)
+                {
+                    if (enemy.gameboard.GameplayBoard[i,j] == deadShip.Name)
+                    {
+                        enemy.gameboard.GameplayBoard[i, j] = null;
                     }
                 }
             }
