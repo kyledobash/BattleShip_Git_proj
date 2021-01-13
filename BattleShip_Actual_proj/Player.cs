@@ -72,17 +72,15 @@ namespace BattleShip_Actual_proj
             //iterate over enemy gameplay array
             //iterate over inner arrays
             //if current index == deadShip.name
-            //current index == null
+            //current index = null
 
-            for (int i = 0; i < enemy.gameboard.GameplayBoard.Length - 1; i++)
+            // for (int i = 0; i < enemy.gameboard.GameplayBoard.Length - 1; i++)
+            foreach (string currentCoordinate in enemy.gameboard.GameplayBoard)
             {
-                for (int j = 0; j < enemy.gameboard.GameplayBoard[i].Length; j++)
-                {
-                    if (enemy.gameboard.GameplayBoard[i,j] == deadShip.Name)
+                    if (currentCoordinate == deadShip.Name)
                     {
-                        enemy.gameboard.GameplayBoard[i, j] = null;
+                        currentCoordinate = null;
                     }
-                }
             }
         }
     }

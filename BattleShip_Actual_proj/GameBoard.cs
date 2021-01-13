@@ -38,7 +38,8 @@ namespace BattleShip_Actual_proj
         // constructor
         public GameBoard()
         {
-            board = new string[20,20];
+            gameplayBoard = new string[20,20];
+            displayBoard = new string[20, 20];
             ships = new List<Ship>();
         }
         // member methods
@@ -63,7 +64,7 @@ namespace BattleShip_Actual_proj
 
             for (int i = 0; i < boat.SpaceSize; i++)
             {
-                if (board[x, y + i] != null)
+                if (gameplayBoard[x, y + i] != null)
                 {
                     spaceIsEmpty = false;
                 }
