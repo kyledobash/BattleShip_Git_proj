@@ -30,5 +30,13 @@ namespace BattleShip_Actual_proj
                 }
             }
         }
+        public void AddMissToGameBoard(int xCoordinate, int yCoordinate)
+        {
+            this.gameboard[xCoordinate, yCoordinate] = "o";
+        }
+        public void AddHitToGameBoard(int xCoordinate, int yCoordinate)
+        {
+            this.gameboard[xCoordinate, yCoordinate] = "x";
+        }
     }
 }

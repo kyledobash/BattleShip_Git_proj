@@ -10,8 +10,8 @@ namespace BattleShip_Actual_proj
     {
         static void Main(string[] args)
         {
-            GameBoard test = new GameBoard();
-            test.PopulateEmptyGameBoard();
+            //GameBoard test = new GameBoard();
+            //test.PopulateEmptyGameBoard();
         }
     }
 }
