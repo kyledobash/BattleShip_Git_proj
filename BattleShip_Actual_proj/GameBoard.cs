@@ -19,6 +19,16 @@ namespace BattleShip_Actual_proj
         }
 
         // member methods
-       
+        public void PopulateEmptyGameBoard()
+        {
+            for (int i = 0; i < this.gameboard.Length - 1; i++)
+            {
+                // this conditional is hardcoded, only way could get loop to work
+                for (int j = 0; j < 20; j++)
+                {
+                    this.gameboard[i, j] = "-";
+                }
+            }
+        }
     }
 }
