@@ -38,18 +38,20 @@ namespace BattleShip_Actual_proj
         {
             this.gameboard[xCoordinate, yCoordinate] = "x";
         }
-        public void AddShipToGameBoard(int xCoordinate, int yCoordinate, Ship ship)
+        public bool CheckSpotIsEmpty(int xCoordinate, int yCoordinate, Ship ship)
         {
-            bool spotIsEmpty = true;
-
             for (int i = 0; i < ship.size; i++)
             {
                 if (this.gameboard[xCoordinate, yCoordinate + i] != "-")
                 {
-                    spotIsEmpty = false;
-                    break;
+                    return false;                    
                 }
             }
+            return true;
+        }
+        public void AddShipToGameBoard(int xCoordinate, int yCoordinate, Ship ship)
+        {
+            bool spotIsEmpty = CheckSpotIsEmpty(xCoordinate, yCoordinate, ship);
 
             if (spotIsEmpty)
             {
