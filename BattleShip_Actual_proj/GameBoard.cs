@@ -21,7 +21,7 @@ namespace BattleShip_Actual_proj
         // member methods
         public void PopulateEmptyGameBoard()
         {
-            for (int i = 0; i < this.gameboard.Length - 1; i++)
+            for (int i = 0; i < 20; i++)
             {
                 // this conditional is hardcoded, only way could get loop to work
                 for (int j = 0; j < 20; j++)
@@ -40,9 +40,27 @@ namespace BattleShip_Actual_proj
         }
         public void AddShipToGameBoard(int xCoordinate, int yCoordinate, Ship ship)
         {
-            for (int i = 0; i <= ship.size; i++)
+            bool spotIsEmpty = true;
+
+            for (int i = 0; i < ship.size; i++)
             {
-                this.gameboard[xCoordinate + i, yCoordinate] = ship.codeLetter;
+                if (this.gameboard[xCoordinate, yCoordinate + i] != "-")
+                {
+                    spotIsEmpty = false;
+                    break;
+                }
+            }
+
+            if (spotIsEmpty)
+            {
+                for (int i = 0; i < ship.size; i++)
+                {
+                    this.gameboard[xCoordinate, yCoordinate + i] = ship.codeLetter;
+                }
+            }
+            else
+            {
+                throw new Exception("There is already a ship at " + xCoordinate + ", " + yCoordinate);
             }
         }
     }
