@@ -24,7 +24,7 @@ namespace BattleShip_Actual_proj
         {
             score++;
         }
-        public void AttemptAttack(int xCoordinate, int yCoordinate, Player enemy)
+        public void AttemptAttack(int xCoordinate, int yCoordinate, Player enemy) //rethink parameters needed
         {
             //check for ship or empty space (helper method)
             //add hit or miss to gameboard(helper method)
@@ -35,7 +35,6 @@ namespace BattleShip_Actual_proj
                     //change ship sunk bool (helper method)
                     //increment attacking player's score (helper method)
 
-        }
-      
+        }     
     }
 }
