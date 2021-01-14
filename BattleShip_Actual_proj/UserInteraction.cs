@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace BattleShip_Actual_proj
 {
-    interface UserInterface
+    public class UserInteraction
     {
-        //populate with methods capturing data from the users
+        // write methods to capture user input and use within the GamePlay class
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BattleShip_Actual_proj
 {
-    class GamePlay : UserInterface
+    public class GamePlay
     {
         //member variables
 
