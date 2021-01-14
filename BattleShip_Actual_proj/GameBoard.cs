@@ -38,5 +38,12 @@ namespace BattleShip_Actual_proj
         {
             this.gameboard[xCoordinate, yCoordinate] = "x";
         }
+        public void AddShipToGameBoard(int xCoordinate, int yCoordinate, Ship ship)
+        {
+            for (int i = 0; i <= ship.size; i++)
+            {
+                this.gameboard[xCoordinate + i, yCoordinate] = ship.codeLetter;
+            }
+        }
     }
 }

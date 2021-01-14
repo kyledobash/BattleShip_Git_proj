@@ -11,6 +11,7 @@ namespace BattleShip_Actual_proj
         // member variables
         public int health;
         public int size;
+        public string codeLetter;
         public bool isItSunk;
 
         // constructor

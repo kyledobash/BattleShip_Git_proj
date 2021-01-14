@@ -16,6 +16,7 @@ namespace BattleShip_Actual_proj
             health = 5;
             size = 5;
             isItSunk = false;
+            codeLetter = "A";
         }
         // member methods
 
