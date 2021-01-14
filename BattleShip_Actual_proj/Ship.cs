@@ -12,10 +12,29 @@ namespace BattleShip_Actual_proj
         public int health;
         public int size;
         public string codeLetter;
-        public bool isItSunk;
+        public bool isItSunk = false;
 
         // constructor
 
         // member methods
+        public void DecrementHealth()
+        {
+            health--;
+        }
+        public void SinkShip()
+        {
+            isItSunk = true;
+        }
+        public bool CheckShipHealth()
+        {
+            if (health == 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }
