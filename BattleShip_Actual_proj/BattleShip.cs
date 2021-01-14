@@ -11,7 +11,12 @@ namespace BattleShip_Actual_proj
         // member variables
 
         // constructor
-        
+        public BattleShip()
+        {
+            health = 4;
+            size = 4;
+            isItSunk = false;
+        }
         // member methods
 
     }

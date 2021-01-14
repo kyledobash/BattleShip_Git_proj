@@ -9,9 +9,15 @@ namespace BattleShip_Actual_proj
     public class GameBoard
     {
         // member variables
-        
+        public string[,] gameboard;
+
         // constructor
-       
+        public GameBoard()
+        {
+            gameboard = new string[20, 20];
+
+        }
+
         // member methods
        
     }

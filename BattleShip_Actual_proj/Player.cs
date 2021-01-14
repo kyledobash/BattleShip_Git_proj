@@ -9,8 +9,13 @@ namespace BattleShip_Actual_proj
     public class Player
     {
         // member variables
-        
+        GameBoard myGameBoard;
+
         // constructor
+        public Player()
+        {
+            myGameBoard = new GameBoard();
+        }
        
         // member methods
       

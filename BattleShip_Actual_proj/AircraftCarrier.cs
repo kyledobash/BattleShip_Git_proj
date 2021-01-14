@@ -11,7 +11,12 @@ namespace BattleShip_Actual_proj
         // member variables
 
         // constructor
-        
+        public AircraftCarrier()
+        {
+            health = 5;
+            size = 5;
+            isItSunk = false;
+        }
         // member methods
 
     }
